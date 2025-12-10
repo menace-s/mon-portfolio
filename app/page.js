@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Card from "../components/Card";
+import Hero from "../components/Hero";
 
 export default function Home() {
   const mesProjets = [
@@ -30,8 +31,8 @@ export default function Home() {
 
   return (
     // 1. AJOUT DE "pt-36" pour compenser la Navbar fixe
-    <main className="pt-36 pb-20 px-6 max-w-7xl mx-auto min-h-screen">
-      
+    <main className="bg-[#FFFBF5] min-h-screen">
+      <Hero />
       {/* En-tête style Warmr : Gros titre centré */}
       <div className="text-center mb-16 max-w-3xl mx-auto">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 text-[#111827] tracking-tight">

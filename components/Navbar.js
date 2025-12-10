@@ -26,7 +26,7 @@ const Navbar = () => {
     <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-6">
       
       {/* LA NAVBAR "Capsule" */}
-      <nav className="w-full max-w-5xl bg-white/95 backdrop-blur-sm border border-[#bdbdbd] rounded-[20px] px-8 py-4 flex items-center justify-between shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+      <nav className="w-full max-w-5xl bg-white/60 backdrop-blur-sm border border-[#bdbdbd] rounded-[20px] px-8 py-4 flex items-center justify-between shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
 
         {/* 1. LOGO AKJP (Style Orbitron / Speed) */}
         <Link href="/" className="group relative flex items-center">
