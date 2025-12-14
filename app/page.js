@@ -3,6 +3,12 @@
 import { useState } from 'react';
 import Card from "../components/Card";
 import Hero from "../components/Hero";
+import TechStack from "../components/TechStack";
+import SectionTitle from "../components/SectionTitle";
+import DownloadCV from "../components/DownloadCV";
+import Projects from "../components/Projects";
+import About from "../components/About"
+import Footer from "../components/Footer";
 
 export default function Home() {
   const mesProjets = [
@@ -33,40 +39,14 @@ export default function Home() {
     // 1. AJOUT DE "pt-36" pour compenser la Navbar fixe
     <main className="bg-[#FFFBF5] min-h-screen">
       <Hero />
-      {/* En-tête style Warmr : Gros titre centré */}
-      <div className="text-center mb-16 max-w-3xl mx-auto">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 text-[#111827] tracking-tight">
-          Mes Réalisations
-        </h1>
-        <p className="text-xl text-gray-500 font-medium">
-           Une sélection de mes projets, triés sur le volet.
-        </p>
-      </div>
+      <About />
+      {/* SECTION PROJETS */}
+      <Projects />
+      {/* SECTION STACK TECHNIQUE */}
+      <TechStack />
+      <DownloadCV />
+      <Footer />
 
-      {/* 2. BOUTONS : Zone de filtre centrée */}
-      <div className="flex flex-wrap justify-center gap-3 mb-12">
-        <button onClick={() => setFiltreActif("Tous")} className={getButtonStyle("Tous")}>
-          Tous
-        </button>
-        <button onClick={() => setFiltreActif("Web")} className={getButtonStyle("Web")}>
-          Web
-        </button>
-        <button onClick={() => setFiltreActif("Mobile")} className={getButtonStyle("Mobile")}>
-          Mobile
-        </button>
-      </div>
-      
-      {/* Grille aérée */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projetsFiltres.map((projet) => (
-          <Card 
-            key={projet.id} 
-            id={projet.id} // <--- 3. On passe l'ID ici pour l'affichage "Step X"
-            titre={projet.titre} 
-            desc={projet.desc} 
-          />
-        ))}
-      </div>
     </main>
   );
 }
