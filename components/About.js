@@ -1,11 +1,14 @@
 "use client";
+import { useState } from 'react';
+
 import SectionTitle from "./SectionTitle";
 
 const About = () => {
-  // --- TES INFOS ICI ---
   const myInfo = {
-    age: "23 ans", // Mets ton âge ici
-    city: "Abidjan, CI", // Ta ville
+    age: "22 ans",
+    city: "Abidjan, CI",
+    email: "akolajeanphilippe@gmail.com",
+    phone: "05-44-83-35-50",
     school: "ESATIC",
     degree: "Licence SIGL",
     current: "Master 2"
@@ -24,16 +27,21 @@ const About = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         
         {/* --- COLONNE GAUCHE : LE TEXTE & PARCOURS --- */}
-        <div className="space-y-8">
+        <div className="space-y-8 text-justify">
           
           {/* Texte de présentation */}
           <div className="prose prose-lg text-gray-600">
             <p>
-              Salut ! Je suis un développeur passionné basé à <span className="font-bold text-[#111827]">{myInfo.city}</span>. 
-              Mon parcours a commencé par une fascination pour la logique et la création.
+              J&apos;ai toujours aimé comprendre comment les choses fonctionnent et surtout, comment les créer.
             </p>
             <p>
-              J'ai solidifié mes connaissances à l&apos;<strong>ESATIC</strong>, où j&apos;ai appris la rigueur de l&apos;ingénierie logicielle. Aujourd&apos;hui, en fin de cursus Master, je combine cette rigueur académique avec une créativité moderne pour bâtir des applications web et mobiles performantes.
+              À l&apos;<strong>ESATIC</strong>, j&apos;ai appris les principes d&apos;ingénierie qui font la différence entre 
+              du code qui marche et une solution vraiment solide. Aujourd&apos;hui, je m&apos;appuie sur ces fondamentaux 
+              pour concevoir des applications <strong>robustes, scalables et maintenables</strong>.
+            </p>
+            <p>
+              Mon approche ? Comprendre le problème en profondeur avant de coder, 
+              et construire des solutions qui durent dans le temps.
             </p>
           </div>
 
@@ -41,24 +49,35 @@ const About = () => {
           <div className="space-y-4 mt-8">
             
             {/* Étape 1 : Master 2 (Actuel) */}
-            <div className="flex items-center gap-4 bg-[#FFFBF5] border-2 border-[#111827] p-4 rounded-2xl shadow-[4px_4px_0px_0px_#111827] hover:translate-x-1 hover:shadow-none transition-all">
+            <div className="flex items-center gap-4 bg-[#FFFBF5] border-2 border-[#111827] p-4 rounded-2xl shadow-[4px_4px_0px_0px_#111827] ">
               <div className="w-12 h-12 bg-[#FFD065] rounded-xl border-2 border-[#111827] flex items-center justify-center flex-shrink-0">
                 <span className="text-xl">🎓</span>
               </div>
               <div>
                 <h4 className="font-black text-[#111827] text-lg">Master 2 (En cours)</h4>
-                <p className="text-sm font-bold text-gray-500">Spécialisation Développement & Systèmes</p>
+                <p className="text-sm font-bold text-gray-500">ESATIC • Systèmes d&apos;Information & Génie Logiciel</p>
               </div>
             </div>
 
-            {/* Étape 2 : ESATIC */}
-            <div className="flex items-center gap-4 bg-white border-2 border-[#111827] p-4 rounded-2xl shadow-[4px_4px_0px_0px_#111827] hover:translate-x-1 hover:shadow-none transition-all">
+            {/* Étape 2 : Licence */}
+            <div className="flex items-center gap-4 bg-white border-2 border-[#111827] p-4 rounded-2xl shadow-[4px_4px_0px_0px_#111827] ">
               <div className="w-12 h-12 bg-white rounded-xl border-2 border-[#111827] flex items-center justify-center flex-shrink-0">
                 <span className="text-xl">🏛️</span>
               </div>
               <div>
                 <h4 className="font-black text-[#111827] text-lg">Licence SIGL</h4>
                 <p className="text-sm font-bold text-gray-500">ESATIC • Systèmes d&apos;Information & Génie Logiciel</p>
+              </div>
+            </div>
+
+            {/* Étape 3 : Bac */}
+            <div className="flex items-center gap-4 bg-white border-2 border-[#111827] p-4 rounded-2xl shadow-[4px_4px_0px_0px_#111827] ">
+              <div className="w-12 h-12 bg-white rounded-xl border-2 border-[#111827] flex items-center justify-center flex-shrink-0">
+                <span className="text-xl">📚</span>
+              </div>
+              <div>
+                <h4 className="font-black text-[#111827] text-lg">Baccalauréat Série D</h4>
+                <p className="text-sm font-bold text-gray-500">Lycée Classique d&apos;Abidjan</p>
               </div>
             </div>
 
@@ -69,7 +88,7 @@ const About = () => {
         <div className="relative">
           
           {/* Carte Principale */}
-          <div className="bg-white border-4 border-[#111827] rounded-[40px] p-8 shadow-[10px_10px_0px_0px_#111827] relative overflow-hidden">
+          <div className="bg-white border-4 border-[#111827] rounded-[40px] p-8 shadow-[5px_5px_0px_0px_#111827] relative overflow-hidden">
             
             {/* Déco Ruban Jaune */}
             <div className="absolute top-0 right-0 bg-[#FFD065] text-[#111827] font-black text-xs px-8 py-2 border-b-2 border-l-2 border-[#111827] rounded-bl-2xl">
@@ -96,7 +115,25 @@ const About = () => {
                 </div>
               </div>
 
-              {/* Stat 3 : Ecole */}
+              {/* Stat 3 : Email */}
+              <div className="flex flex-col gap-2 col-span-2 border-t-2 border-dashed border-gray-200 pt-4">
+                <span className="text-gray-400 text-xs font-black uppercase tracking-widest">Email</span>
+                <a href={`mailto:${myInfo.email}`} className="flex items-center gap-2 font-bold text-[#111827] text-base hover:text-[#FFD065] transition-colors break-all">
+                  <svg className="w-5 h-5 text-[#FFD065] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                  {myInfo.email}
+                </a>
+              </div>
+
+              {/* Stat 4 : Téléphone */}
+              <div className="flex flex-col gap-2 col-span-2">
+                <span className="text-gray-400 text-xs font-black uppercase tracking-widest">Téléphone</span>
+                <a href={`tel:${myInfo.phone}`} className="flex items-center gap-2 font-bold text-[#111827] text-lg hover:text-[#FFD065] transition-colors">
+                  <svg className="w-5 h-5 text-[#FFD065]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                  {myInfo.phone}
+                </a>
+              </div>
+
+              {/* Stat 5 : Formation */}
               <div className="flex flex-col gap-2 col-span-2 border-t-2 border-dashed border-gray-200 pt-4">
                 <span className="text-gray-400 text-xs font-black uppercase tracking-widest">Formation</span>
                 <div className="font-bold text-[#111827] text-lg">
@@ -105,7 +142,7 @@ const About = () => {
                 </div>
               </div>
 
-              {/* Stat 4 : Status */}
+              {/* Stat 6 : Status */}
               <div className="flex flex-col gap-2 col-span-2 bg-gray-50 p-4 rounded-xl border-2 border-gray-100">
                 <span className="text-gray-400 text-xs font-black uppercase tracking-widest">Actuellement</span>
                 <div className="flex items-center gap-2 text-green-600 font-bold">

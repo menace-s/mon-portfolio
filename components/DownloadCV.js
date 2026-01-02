@@ -2,7 +2,7 @@
 
 const DownloadCV = () => {
   return (
-    <section className="px-6 max-w-5xl mx-auto mb-20">
+    <section id="cv" className="px-6 max-w-5xl mx-auto mb-20">
       
       {/* CADRE "VIVANT" 
           - Fond Jaune Warmr (#FFD065) pour l'impact visuel
@@ -16,7 +16,7 @@ const DownloadCV = () => {
             On travaille ensemble ?
           </h2>
           <p className="text-[#111827]/80 font-medium text-lg max-w-md">
-            Téléchargez mon CV pour découvrir mon parcours et mes compétences en détail.
+            Téléchargez mon CV pour découvrir mon parcours et mes compétences.
           </p>
         </div>
 

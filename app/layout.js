@@ -9,13 +9,13 @@ const outfit = Outfit({
 });
 
 export const metadata = {
-  title: 'Mon Portfolio Warmr',
-  description: 'Design inspiré',
+  title: 'Aganh kola jean philippe - Ingénieur Logiciel',
+  description: 'Ingénieur Logiciel',
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fr">
+    <html lang="fr" className="scroll-smooth !scroll-pt-20">
       {/* On ajoute la variable de police ici */}
       <body className={`${outfit.variable} antialiased`}>
         <Navbar />

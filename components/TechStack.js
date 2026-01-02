@@ -21,29 +21,35 @@ const TechStack = () => {
   const stacks = {
     "Frontend": [
       { name: "React", icon: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" },
+      { name: "Angular", icon: "https://cdn.simpleicons.org/angular/DD0031" },
+      { name: "Livewire", icon: "https://cdn.simpleicons.org/livewire/FB70A9" },
       { name: "Next.js", icon: "https://cdn.worldvectorlogo.com/logos/next-js.svg" },
       { name: "Tailwind", icon: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" },
+      { name: "JavaScript", icon: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" },
       { name: "TypeScript", icon: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" },
     ],
     "Backend": [
+      { name: "Laravel", icon: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg" },
       { name: "Node.js", icon: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" },
-      { name: "Supabase", icon: "https://seeklogo.com/images/S/supabase-logo-DCC676FFE2-seeklogo.com.png" },
-      { name: "PostgreSQL", icon: "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg" },
       { name: "Java", icon: "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" },
+      { name: "MySQL", icon: "https://upload.wikimedia.org/wikipedia/fr/6/62/MySQL.svg" },
+      { name: "PostgreSQL", icon: "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg" },
+      { name: "MongoDB", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg" },
+      { name: "Oracle", icon: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg" },
     ],
     "Mobile": [
-      { name: "Swift", icon: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Swift_logo.svg" },
       { name: "Kotlin", icon: "https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png" },
-      { name: "Android", icon: "https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" },
+      { name: "Jetpack Compose", icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/jetpackcompose/jetpackcompose-original.svg" },
     ],
     "BI & Data": [
       { name: "Power BI", icon: "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" },
-      { name: "Excel", icon: "https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg" },
-      { name: "Tableau", icon: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Tableau_Logo.png" },
+      { name: "Excel", icon: "https://upload.wikimedia.org/wikipedia/commons/7/73/Microsoft_Excel_2013-2019_logo.svg" },
     ],
     "Outils": [
       { name: "Git", icon: "https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" },
+      { name: "GitHub", icon: "https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg" },
       { name: "Figma", icon: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" },
+      { name: "Trello", icon: "https://www.vectorlogo.zone/logos/trello/trello-icon.svg" },
       { name: "Vercel", icon: "https://assets.vercel.com/image/upload/v1588805858/repositories/vercel/logo.png" },
     ]
   };
@@ -52,7 +58,7 @@ const TechStack = () => {
     <section id="stack" className="py-20 px-6 max-w-7xl mx-auto my-10 relative">
       
       <SectionTitle
-        pill="Expertise"
+        pill="Stack technique"
         title="Ma Stack Technique"
         subtitle="Je choisis les meilleurs outils pour chaque problème."
         align="center"
